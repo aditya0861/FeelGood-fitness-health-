@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Mood Workout</title>
+    <style>
+/* General Reset and Base Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #eeb5c6, #b2b4e4, #b3b4e4);
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Exercise Section Styling with Colors */
+.exercise {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #f7f9fc, #e6edf8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exercise:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to bottom right, #e6edf8, #d0dbf3);
+}
+
+.exercise h2 {
+    color: #ff6363;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    background-color: #ffebec;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.exercise p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fff8e1;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+/* Highlighting Pros and Cons */
+.pros {
+    color: #28a745;
+    font-weight: 500;
+    background-color: #eaf9e9;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.cons {
+    color: #e63946;
+    font-weight: 500;
+    background-color: #ffe5e6;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Styling Media (Images & Videos) */
+.exercise img,
+.exercise video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.exercise img:hover,
+.exercise video:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-top: 3px solid #ff6363;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 300;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Mood Workout</h1>
+        <p>Boost your mood and stay fit with these exercises!</p>
+    </header>
+    <div class="container">
+        <div class="exercise">
+            <h2>1. Yoga</h2>
+            <p>Focuses on breathing and mindfulness while improving flexibility.</p>
+            <img src="data:image/jpeg;base64,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" alt="Yoga Exercise">
+            <p class="pros"><strong>Pros:</strong> Reduces stress, improves flexibility, enhances mood.</p>
+            <p class="cons"><strong>Cons:</strong> Requires practice to master poses, may not provide intense cardio.</p>
+            <video controls autoplay muted and loop  src="yoga.mp4 "></video>
+        </div>
+        <div class="exercise">
+            <h2>2. Running</h2>
+            <p>A classic cardiovascular exercise that releases endorphins.</p>
+            <img src="https://plus.unsplash.com/premium_photo-1669021454145-49146869b916?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbiUyMHJ1bm5pbmd8ZW58MHx8MHx8fDA%3D">
+            <p class="pros"><strong>Pros:</strong> Boosts heart health, easy to start, excellent stress reliever.</p>
+            <p class="cons"><strong>Cons:</strong> Can be hard on joints, requires good running shoes.</p>
+            <video controls>
+                <source src="running.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="exercise">
+            <h2>3. Strength Training</h2>
+            <p>Builds strength and improves overall fitness.</p>
+            <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+            <p class="pros"><strong>Pros:</strong> Builds muscle, improves posture, boosts metabolism.</p>
+            <p class="cons"><strong>Cons:</strong> Requires equipment, may feel intimidating for beginners.</p>
+            <video controls>
+                <source src="strength.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="exercise">
+            <h2>4. Cycling</h2>
+            <p>A low-impact workout that's great for your legs and heart.</p>
+            <img src="https://plus.unsplash.com/premium_photo-1713184149461-69b0abeb3daa?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3ljbGluZ3xlbnwwfHwwfHx8MA%3D%3D">
+            <p class="pros"><strong>Pros:</strong> Easy on joints, great for endurance, enjoyable outdoors.</p>
+            <p class="cons"><strong>Cons:</strong> Needs a bike, weather-dependent if outdoors.</p>
+            <video controls>
+                <source src="cycling.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <footer>
+        <p>  Copyright © 2024 FeelGood. All rights reserved.</p>
+    </footer>
+</body>
+</html>

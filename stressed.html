@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stressed Workout Plan</title>
+    <style>
+    body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #eeb5c6, #b2b4e4, #b3b4e4);
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Exercise Section Styling with Colors */
+.exercise {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #f7f9fc, #e6edf8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exercise:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to bottom right, #e6edf8, #d0dbf3);
+}
+
+.exercise h2 {
+    color: #ff6363;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    background-color: #ffebec;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.exercise p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fff8e1;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+/* Highlighting Pros and Cons */
+.pros {
+    color: #28a745;
+    font-weight: 500;
+    background-color: #eaf9e9;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.cons {
+    color: #e63946;
+    font-weight: 500;
+    background-color: #ffe5e6;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Styling Media (Images & Videos) */
+.exercise img,
+.exercise video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.exercise img:hover,
+.exercise video:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-top: 3px solid #ff6363;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 300;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Stressed Workout Plan</h1>
+        <p>Release stress and boost your mood with these effective exercises!</p>
+    </header>
+
+    <div class="container">
+        <!-- Boxing Exercise -->
+        <div class="exercise">
+            <h2>1. Walking</h2>
+            <p>A simple yet effective way to boost circulation and wake up the body.</p>
+            <img src="data:image/jpeg;base64,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" alt="Walking Exercise">
+            <p class="pros"><strong>Pros:</strong> Low impact, improves cardiovascular health, easy to do anywhere.</p>
+            <p class="cons"><strong>Cons:</strong> May be monotonous, weather-dependent.</p>
+         
+        </div>
+
+        <!-- Swimming Exercise -->
+        <div class="exercise">
+            <h2>2. Swimming</h2>
+            <p>Swimming provides a full-body workout that relaxes the mind and body.</p>
+            <img src="https://media.istockphoto.com/id/465383082/photo/female-swimmer-at-the-swimming-pool.jpg?s=612x612&w=0&k=20&c=tcTwN2rTvUBK4wddan_GUCxrXX6bBoU-hyrVMvmT0BM=" alt="Swimming Exercise">
+            <p class="pros"><strong>Pros:</strong> Low-impact, full-body workout, calms the mind.</p>
+            <p class="cons"><strong>Cons:</strong> Requires a pool, may not be accessible everywhere.</p>
+            <video controls>
+                <source src="swim.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Pilates Exercise -->
+        <div class="exercise">
+            <h2>3. Pilates</h2>
+            <p>Pilates strengthens the core and improves flexibility, making it a great stress reliever.</p>
+            <img src="https://assets.vogue.com/photos/64a6c7863a74fead8c241866/4:3/w_5255,h_3941,c_limit/GettyImages-1306517212.jpg" alt="Pilates Exercise">
+            <p class="pros"><strong>Pros:</strong> Builds core strength, improves posture, low impact.</p>
+            <p class="cons"><strong>Cons:</strong> Requires equipment, can be challenging for beginners.</p>
+            <video controls>
+                <source src="pilates.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2024 FeelGood. All rights reserved.</p>
+    </footer>
+</body>
+</html>

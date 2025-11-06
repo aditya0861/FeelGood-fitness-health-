@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Workout Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #eeb5c6, #b2b4e4, #b3b4e4);
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #b2b4e4, #b3b4e4);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #eeb5c6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .mood-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 15px 0;
+            padding: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mood-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .mood-card h2 {
+            margin: 0;
+            color: #007BFF;
+        }
+        .workout {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f9f9ff;
+            border-left: 4px solid #007BFF;
+            border-radius: 5px;
+        }
+        button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+    background: linear-gradient(to right, #eeb5c6, #b2b4e4, #b3b4e4);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    border-top: 5px solid #eeb5c6;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+    </style>
+    <script>
+        function toggleWorkout(id) {
+            const workout = document.getElementById(id);
+            workout.style.display = workout.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1> Workout Plans for Mood Based</h1>
+        <p>Choose a workout that fits your mood!</p>
+    </header>
+    <div class="container">
+        <div class="mood-card" onclick="toggleWorkout('happy-workout')">
+            <h2>Feeling Happy 😃</h2>
+            <p>High-energy workouts to keep the good vibes going.</p>
+            <div class="workout" id="happy-workout">
+                <ul>
+                    <li>10 minutes of dancing</li>
+                    <li>15 minutes of jumping jacks and burpees</li>
+                    <li>Outdoor run or bike ride</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mood-card" onclick="toggleWorkout('stressed-workout')">
+            <h2>Feeling Stressed 😩</h2>
+            <p>Relaxing and de-stressing exercises to help you unwind.</p>
+            <div class="workout" id="stressed-workout">
+                <ul>
+                    <li>10 minutes of yoga stretches</li>
+                    <li>5 minutes of deep breathing exercises</li>
+                    <li>20 minutes of a calming walk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mood-card" onclick="toggleWorkout('low-energy-workout')">
+            <h2>Feeling Low Energy 😴</h2>
+            <p>Gentle workouts to re-energize your body.</p>
+            <div class="workout" id="low-energy-workout">
+                <ul>
+                    <li>10 minutes of light stretching</li>
+                    <li>5 minutes of seated leg lifts</li>
+                    <li>10 minutes of slow-paced yoga</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mood-card" onclick="toggleWorkout('sad-workout')">
+            <h2>Feeling Sad 😢</h2>
+            <p>Workouts to uplift your mood and bring positivity.</p>
+            <div class="workout" id="sad-workout">
+                <ul>
+                    <li>15 minutes of brisk walking</li>
+                    <li>10 minutes of dancing to your favorite music</li>
+                    <li>20 minutes of gentle stretching</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mood-card" onclick="toggleWorkout('anxious-workout')">
+            <h2>Feeling Anxious 😟</h2>
+            <p>Calming exercises to soothe your mind and body.</p>
+            <div class="workout" id="anxious-workout">
+                <ul>
+                    <li>5 minutes of slow, deep breathing</li>
+                    <li>10 minutes of yoga focusing on balance poses</li>
+                    <li>15 minutes of a mindful nature walk</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mood-card" onclick="toggleWorkout('tired-workout')">
+            <h2>Feeling Tired 😓</h2>
+            <p>Low-intensity workouts to refresh and rejuvenate.</p>
+            <div class="workout" id="tired-workout">
+                <ul>
+                    <li>5 minutes of neck and shoulder stretches</li>
+                    <li>10 minutes of light yoga (child’s pose, cat-cow)</li>
+                    <li>15 minutes of a slow-paced walk</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <footer>
+            &copy;  2024 FeelGood. All Rights Reserved.
+        </footer>
+    </div>
+</body>
+</html>

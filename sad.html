@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sad Mood Workout</title>
+    <style>
+        /* General Reset and Base Styling */
+        body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #eeb5c6, #b2b4e4, #b3b4e4);
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Exercise Section Styling with Colors */
+.exercise {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #f7f9fc, #e6edf8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exercise:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(to bottom right, #e6edf8, #d0dbf3);
+}
+
+.exercise h2 {
+    color: #ff6363;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    background-color: #ffebec;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.exercise p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fff8e1;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+/* Highlighting Pros and Cons */
+.pros {
+    color: #28a745;
+    font-weight: 500;
+    background-color: #eaf9e9;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.cons {
+    color: #e63946;
+    font-weight: 500;
+    background-color: #ffe5e6;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Styling Media (Images & Videos) */
+.exercise img,
+.exercise video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.exercise img:hover,
+.exercise video:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-top: 3px solid #ff6363;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 300;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sad Mood Workout</h1>
+        <p>Exercises to help you process emotions and uplift your spirits!</p>
+    </header>
+    <div class="container">
+        <div class="exercise">
+            <h2>1. Slow Yoga</h2>
+            <p>Gently stretches the body while focusing on mindful breathing.</p>
+            <img src="https://www.consciouslifestylemag.com/wp-content/uploads/2016/02/Slow-Yoga-Bridge-1.jpg" alt="Yoga Exercise">
+            <p class="pros"><strong>Pros:</strong> Eases tension, promotes relaxation, and improves flexibility.</p>
+            <p class="cons"><strong>Cons:</strong> Requires patience and practice for optimal benefits.</p>
+            <div>
+                <video controls>
+                    <source src="slow yoga.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>  
+        <div class="exercise">
+            <h2>2. Breathing Exercises</h2>
+            <p>Calms the mind and regulates stress-related symptoms.</p>
+            <img src="https://static.toiimg.com/photo/72400605.cms" alt="Breathing Exercise">
+            <p class="pros"><strong>Pros:</strong> Quick relief from stress, can be done anywhere.</p>
+            <p class="cons"><strong>Cons:</strong> May feel less effective without practice.</p>
+            <div>
+                <video controls>
+                    <source src="Deep breathing.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Copyright © 2024 FeelGood. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://media.istockphoto.com/id/1369576624/photo/shot-of-an-empty-gym.jpg?s=612x612&w=0&k=20&c=Zhr9-ysvgzTLHWp7rheUeKsnZ2LOX2-zHUI6_eDETrQ=') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        #signup-form {
+            background: rgb(209, 192, 146); /* White with slight transparency */
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #88c7f5;
+            outline: none;
+        }
+
+        .signup-btn {
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* Gradient background */
+            color: #fff; /* White text */
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-btn:hover {
+            background: linear-gradient(to right, #a6c1ee, #fbc2eb); /* Reversed gradient */
+            color: #333; /* Darker text color on hover */
+            transform: scale(1.05);
+        }
+
+        .signup-btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .terms {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="signup-form">
+        <h1>Sign Up</h1>
+        <p>Create your account to join our community!</p>
+        <form id="signup-form-element">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform any form validation or processing here
+
+            // Redirect to the main page
+            window.location.href = 'index.html';
+        });
+    </script>
+</form>
+<script>
+    document.getElementById('signup-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Get the name from the form
+        var name = document.getElementById('name').value;
+        
+        // Store the name in localStorage
+        localStorage.setItem('userName', name);
+
+        // Redirect to the main page
+        window.location.href = 'index.html'; // Redirect to your index page
+    });
+</script>
+</body>
+</html>

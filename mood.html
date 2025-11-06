@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Mood</title>
+</head>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #eeb5c6, #b2b4e4, #b3b4e4); /* Gradient background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Container */
+.section__container {
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    text-align: center;
+}
+
+/* Section Header */
+.section__header {
+    font-size: 3em;
+    color: #ffdfd3;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #388E3C;
+}
+</style>
+<body>
+<section class="choose-mood">
+    <div class="section__container">
+        <h2 class="section__header">Select Your Mood</h2>
+        <p>Please select your current mood to find the right workout for you.</p>
+        
+        <form id="moodForm">
+            <label for="mood">Choose your mood:</label>
+            <select id="mood" name="mood" required>
+                <option value="">Select a mood</option>
+                <option value="happy">happy</option> 
+                <option value="stressed">stressed</option>
+                <option value="tired">Tired</option>
+                <option value="sad">Sad</option>
+                <option value="anxious">Anxious</option>
+                <option value="excited">Excited</option>
+            </select>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('moodForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevents form from submitting normally
+
+    // Get the selected mood
+    const selectedMood = document.getElementById('mood').value;
+    console.log('Selected Mood:', selectedMood); // Debugging
+
+    // Define the redirect page based on the mood selected
+    let moodPage = '';
+
+    switch(selectedMood) {
+        case 'happy':
+            moodPage = 'happy.html';
+            break;
+        case 'stressed':
+            moodPage = 'stressed.html';
+            break;
+        case 'tired':
+            moodPage = 'tired.html';
+            break;
+        case 'sad':
+            moodPage = 'sad.html';
+            break;
+        case 'anxious':
+            moodPage = 'anxious.html';
+            break;
+        case 'excited':
+            moodPage = 'excited.html';
+            break;
+        default:
+            moodPage = ''; 
+    }
+
+    // If mood is selected, redirect to the respective page
+    if (moodPage !== '') {
+        console.log('Redirecting to:', moodPage); // Debugging
+        window.location.href = moodPage;
+    } else {
+        alert('Please select a mood');
+    }
+});
+</script>
+</body>
+</html>
